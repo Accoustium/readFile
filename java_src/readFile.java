@@ -1,3 +1,5 @@
+package java_src;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -7,10 +9,12 @@ import java.io.IOException;
 public class readFile {
     public static void main(String[] args) throws IOException {
         readFile rf = new readFile();
+        String currentPath = new File(".").getCanonicalPath();
+        System.out.println(currentPath);
 
         // Good Test
         System.out.println("Good Test");
-        String contents = rf.readString("test_data/lorem.txt");
+        String contents = rf.readString(currentPath + "\\test_data\\lorem.txt");
         System.out.println(contents);
 
         System.out.println("\n\n");
