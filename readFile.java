@@ -7,7 +7,17 @@ import java.io.IOException;
 public class readFile {
     public static void main(String[] args) throws IOException {
         readFile rf = new readFile();
+
+        // Good Test
+        System.out.println("Good Test");
         String contents = rf.readString("test_data/lorem.txt");
+        System.out.println(contents);
+
+        System.out.println("\n\n");
+
+        // Bad Test
+        System.out.println("Bad Test");
+        contents = rf.readString("lorem.txt");
         System.out.println(contents);
     }
 
